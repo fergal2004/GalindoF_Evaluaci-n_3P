@@ -1,8 +1,7 @@
-// Views/LogPage.xaml.cs
 using Evaluacion3P.ViewModels;
 using System.Diagnostics; // Added for Debug.WriteLine
 
-namespace Evaluacion3P.Views; // Este namespace debe coincidir con x:Class en LogPage.xaml
+namespace Evaluacion3P.Views; 
 
 public partial class LogPage : ContentPage // La clase debe ser 'partial'
 {
@@ -18,7 +17,7 @@ public partial class LogPage : ContentPage // La clase debe ser 'partial'
         {
             Debug.WriteLine($"LogPage: Error in constructor: {ex.Message}");
             // Si la app se cierra, puedes descomentar la siguiente línea para ver una alerta
-            // Shell.Current.DisplayAlert("Error", $"LogPage Constructor Error: {ex.Message}", "OK");
+            Shell.Current.DisplayAlert("Error", $"LogPage Constructor Error: {ex.Message}", "OK");
         }
     }
 
@@ -38,7 +37,7 @@ public partial class LogPage : ContentPage // La clase debe ser 'partial'
         {
             Debug.WriteLine($"LogPage: Error in OnAppearing: {ex.Message}");
             // Si la app se cierra, puedes descomentar la siguiente línea para ver una alerta
-            // Shell.Current.DisplayAlert("Error", $"LogPage OnAppearing Error: {ex.Message}", "OK");
+            Shell.Current.DisplayAlert("Error", $"LogPage OnAppearing Error: {ex.Message}", "OK");
         }
     }
 }

@@ -17,7 +17,7 @@ public partial class ClienteDetailPage : ContentPage
         catch (Exception ex)
         {
             Debug.WriteLine($"ClienteDetailPage: Error in constructor: {ex.Message}");
-            // Shell.Current.DisplayAlert("Error", $"ClienteDetailPage Constructor Error: {ex.Message}", "OK");
+            Shell.Current.DisplayAlert("Error", $"ClienteDetailPage Constructor Error: {ex.Message}", "OK");
         }
     }
 
