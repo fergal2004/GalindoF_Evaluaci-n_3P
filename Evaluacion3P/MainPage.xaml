@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:Evaluacion3P.Models"
+             xmlns:viewmodels="clr-namespace:Evaluacion3P.ViewModels"
+             x:Class="Evaluacion3P.Views.MainPage"
+             Title="Fernando Galindo 08/07/2025">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Añadir Cliente"
+                     Command="{Binding AddNewClienteCommand}"
+                     Order="Primary" />
+    </ContentPage.ToolbarItems>
+
+    <Grid BackgroundColor="{AppThemeBinding Dark={StaticResource DarkBackground}, Light={StaticResource LightBackground}}">
+        <CollectionView ItemsSource="{Binding Clientes}"
+                        SelectionMode="Single"
+                        SelectionChangedCommand="{Binding GoToDetailsCommand}"
+                        SelectionChangedCommandParameter="{Binding Source={RelativeSource Self}, Path=SelectedItem}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Cliente">
+                    <Border StrokeShape="RoundRectangle 10"
+                            Stroke="{AppThemeBinding Dark={StaticResource DarkBorder}, Light={StaticResource LightBorder}}"
+                            BackgroundColor="{AppThemeBinding Dark={StaticResource DarkCardBackground}, Light={StaticResource LightCardBackground}}"
+                            Margin="10,5"
+                            Padding="15">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Nombre}"
+                                   FontSize="Title"
+                                   FontAttributes="Bold"
+                                   TextColor="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}" />
+                            <Label Text="{Binding Empresa}"
+                                   FontSize="Medium"
+                                   TextColor="{AppThemeBinding Dark={StaticResource Gray200}, Light={StaticResource Gray800}}" />
+                            <Label Text="{Binding AntiguedadMeses, StringFormat='Antigüedad: {0} meses'}"
+                                   FontSize="Caption"
+                                   TextColor="{AppThemeBinding Dark={StaticResource Gray200}, Light={StaticResource Gray800}}" />
+                            <CheckBox IsChecked="{Binding Activo}"
+                                      Color="{StaticResource PrimaryColor}"
+                                      HorizontalOptions="End"
+                                      VerticalOptions="Center"
+                                      InputTransparent="True" />
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            <CollectionView.EmptyView>
+                <VerticalStackLayout Spacing="10" Padding="20" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="¡No hay clientes todavía!" FontSize="Title" HorizontalOptions="Center" TextColor="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}" />
+                    <Label Text="Pulsa 'Añadir Cliente' para empezar." FontSize="Medium" HorizontalOptions="Center" TextColor="{AppThemeBinding Dark={StaticResource Gray200}, Light={StaticResource Gray800}}" />
+                </VerticalStackLayout>
+            </CollectionView.EmptyView>
+        </CollectionView>
+    </Grid>
+
+</ContentPage>
+

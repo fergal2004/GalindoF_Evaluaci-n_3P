@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:Evaluacion3P.ViewModels"
+             Title="Detalles del Cliente">
+
+    <VerticalStackLayout Spacing="20" Padding="20" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"
+                         BackgroundColor="{AppThemeBinding Dark={StaticResource DarkBackground}, Light={StaticResource LightBackground}}">
+
+        <Frame Style="{StaticResource CardFrameStyle}">
+            <VerticalStackLayout Spacing="10">
+                <Label Text="Nombre:" FontSize="Medium" TextColor="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}" />
+                <Entry Text="{Binding Cliente.Nombre}" Placeholder="Introduce el nombre del cliente" Keyboard="Text" Style="{StaticResource EntryStyle}" />
+
+                <Label Text="Empresa:" FontSize="Medium" TextColor="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}" />
+                <Entry Text="{Binding Cliente.Empresa}" Placeholder="Introduce el nombre de la empresa" Keyboard="Text" Style="{StaticResource EntryStyle}" />
+
+                <Label Text="Antigüedad (Meses):" FontSize="Medium" TextColor="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}" />
+                <Entry Text="{Binding Cliente.AntiguedadMeses}" Placeholder="Introduce la antigüedad en meses" Keyboard="Numeric" Style="{StaticResource EntryStyle}" />
+
+                <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                    <Label Text="Activo:" FontSize="Medium" TextColor="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}" VerticalOptions="Center" />
+                    <CheckBox IsChecked="{Binding Cliente.Activo}" Color="{StaticResource PrimaryColor}" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Frame>
+
+        <HorizontalStackLayout Spacing="15" HorizontalOptions="Center" Margin="0,20,0,0">
+            <Button Text="Guardar"
+                    Command="{Binding SaveClienteCommand}"
+                    Style="{StaticResource PrimaryButtonStyle}" />
+
+            <Button Text="Cancelar"
+                    Command="{Binding CancelCommand}"
+                    Style="{StaticResource SecondaryButtonStyle}" />
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+
+</ContentPage>
+

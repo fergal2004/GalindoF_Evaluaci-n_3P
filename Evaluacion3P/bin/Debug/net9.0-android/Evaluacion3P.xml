@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Evaluacion3P</name>
+    </assembly>
+    <members>
+        <member name="T:Evaluacion3P.ViewModels.ClienteDetailViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:Evaluacion3P.ViewModels.ClienteDetailViewModel.Cliente">
+            <inheritdoc cref="F:Evaluacion3P.ViewModels.ClienteDetailViewModel.cliente"/>
+        </member>
+        <member name="P:Evaluacion3P.ViewModels.ClienteDetailViewModel.ClienteId">
+            <inheritdoc cref="F:Evaluacion3P.ViewModels.ClienteDetailViewModel.clienteId"/>
+        </member>
+        <member name="M:Evaluacion3P.ViewModels.ClienteDetailViewModel.OnClienteIdChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:Evaluacion3P.ViewModels.ClienteDetailViewModel.ClienteId"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:Evaluacion3P.ViewModels.ClienteDetailViewModel.ClienteId"/> is changed.</remarks>
+        </member>
+        <member name="F:Evaluacion3P.ViewModels.ClienteDetailViewModel.saveClienteCommand">
+            <summary>The backing field for <see cref="P:Evaluacion3P.ViewModels.ClienteDetailViewModel.SaveClienteCommand"/>.</summary>
+        </member>
+        <member name="P:Evaluacion3P.ViewModels.ClienteDetailViewModel.SaveClienteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Evaluacion3P.ViewModels.ClienteDetailViewModel.SaveClienteAsync"/>.</summary>
+        </member>
+        <member name="F:Evaluacion3P.ViewModels.ClienteDetailViewModel.cancelCommand">
+            <summary>The backing field for <see cref="P:Evaluacion3P.ViewModels.ClienteDetailViewModel.CancelCommand"/>.</summary>
+        </member>
+        <member name="P:Evaluacion3P.ViewModels.ClienteDetailViewModel.CancelCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Evaluacion3P.ViewModels.ClienteDetailViewModel.CancelAsync"/>.</summary>
+        </member>
+        <member name="T:Evaluacion3P.ViewModels.ClienteListViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="F:Evaluacion3P.ViewModels.ClienteListViewModel.loadClientesCommand">
+            <summary>The backing field for <see cref="P:Evaluacion3P.ViewModels.ClienteListViewModel.LoadClientesCommand"/>.</summary>
+        </member>
+        <member name="P:Evaluacion3P.ViewModels.ClienteListViewModel.LoadClientesCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Evaluacion3P.ViewModels.ClienteListViewModel.LoadClientesAsync"/>.</summary>
+        </member>
+        <member name="F:Evaluacion3P.ViewModels.ClienteListViewModel.goToDetailsCommand">
+            <summary>The backing field for <see cref="P:Evaluacion3P.ViewModels.ClienteListViewModel.GoToDetailsCommand"/>.</summary>
+        </member>
+        <member name="P:Evaluacion3P.ViewModels.ClienteListViewModel.GoToDetailsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Evaluacion3P.ViewModels.ClienteListViewModel.GoToDetailsAsync(Evaluacion3P.Models.Cliente)"/>.</summary>
+        </member>
+        <member name="F:Evaluacion3P.ViewModels.ClienteListViewModel.addNewClienteCommand">
+            <summary>The backing field for <see cref="P:Evaluacion3P.ViewModels.ClienteListViewModel.AddNewClienteCommand"/>.</summary>
+        </member>
+        <member name="P:Evaluacion3P.ViewModels.ClienteListViewModel.AddNewClienteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Evaluacion3P.ViewModels.ClienteListViewModel.AddNewClienteAsync"/>.</summary>
+        </member>
+        <member name="F:Evaluacion3P.ViewModels.ClienteListViewModel.deleteClienteCommand">
+            <summary>The backing field for <see cref="P:Evaluacion3P.ViewModels.ClienteListViewModel.DeleteClienteCommand"/>.</summary>
+        </member>
+        <member name="P:Evaluacion3P.ViewModels.ClienteListViewModel.DeleteClienteCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:Evaluacion3P.ViewModels.ClienteListViewModel.DeleteClienteAsync(Evaluacion3P.Models.Cliente)"/>.</summary>
+        </member>
+        <member name="T:Evaluacion3P.ViewModels.LogViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:Evaluacion3P.ViewModels.LogViewModel.LogContent">
+            <inheritdoc cref="F:Evaluacion3P.ViewModels.LogViewModel.logContent"/>
+        </member>
+        <member name="F:Evaluacion3P.ViewModels.LogViewModel.loadLogsCommand">
+            <summary>The backing field for <see cref="P:Evaluacion3P.ViewModels.LogViewModel.LoadLogsCommand"/>.</summary>
+        </member>
+        <member name="P:Evaluacion3P.ViewModels.LogViewModel.LoadLogsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:Evaluacion3P.ViewModels.LogViewModel.LoadLogsAsync"/>.</summary>
+        </member>
+        <member name="T:Evaluacion3P.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Cliente">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Cliente" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ClienteId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ClienteId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LogContent">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LogContent" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Cliente">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Cliente" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ClienteId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ClienteId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LogContent">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LogContent" generated properties.</summary>
+        </member>
+    </members>
+</doc>

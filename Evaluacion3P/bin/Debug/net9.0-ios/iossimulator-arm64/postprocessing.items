@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="Evaluacion3P.app/Evaluacion3P">
+      <IsAppExtension>false</IsAppExtension>
+      <BCSymbolMapName>Evaluacion3P.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>true</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>true</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>Evaluacion3P.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>/Users/fernangal2004/Desktop/Programacion_IV_Galindo_Fernando/Evaluacion3P/Evaluacion3P/obj/Debug/net9.0-ios/iossimulator-arm64/mtouch-symbols.list</SymbolFile>
+      <DSymName>Evaluacion3P.app.dSYM</DSymName>
+      <SourceProjectPath>/Users/fernangal2004/Desktop/Programacion_IV_Galindo_Fernando/Evaluacion3P/Evaluacion3P</SourceProjectPath>
+      <IsXPCService></IsXPCService>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>

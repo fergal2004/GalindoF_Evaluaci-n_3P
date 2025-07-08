@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:Evaluacion3P.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="Evaluacion3P"
+    x:Class="Evaluacion3P.AppShell">
+
+    <!-- Se asume que los estilos globales se cargan desde App.xaml -->
+    <!-- No se fusionan ResourceDictionaries aquí para evitar conflictos o problemas de carga -->
+
+    <TabBar>
+        <!-- Página de Clientes (MainPage) -->
+        <ShellContent
+            Title="Clientes"
+            Icon="client_icon.png"
+            ContentTemplate="{DataTemplate views:MainPage}"
+            Route="MainPage" />
+
+        <!-- Página de Logs -->
+        <ShellContent
+            Title="Logs"
+            Icon="log_icon.png"
+            ContentTemplate="{DataTemplate views:LogPage}"
+            Route="LogPage" />
+
+        <!-- Página de Detalles de Cliente (Formulario) -->
+        <ShellContent
+            Title="Detalles Cliente"
+            Icon="client_detail_icon.png"
+            ContentTemplate="{DataTemplate views:ClienteDetailPage}"
+            Route="ClienteDetailPage" />
+    </TabBar>
+
+</Shell>
