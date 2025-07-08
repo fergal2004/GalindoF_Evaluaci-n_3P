@@ -41,14 +41,16 @@ public partial class ClienteListViewModel : ObservableObject
     {
         if (cliente == null) return;
         Debug.WriteLine($"Navigating to ClienteDetailPage for ID: {cliente.ID}");
-        await Shell.Current.GoToAsync($"{nameof(ClienteDetailPage)}?ClienteId={cliente.ID}");
+        // Corrected: Use absolute path for Shell navigation
+        await Shell.Current.GoToAsync($"///{nameof(ClienteDetailPage)}?ClienteId={cliente.ID}");
     }
 
     [RelayCommand]
     async Task AddNewClienteAsync()
     {
         Debug.WriteLine("Navigating to ClienteDetailPage to add new client.");
-        await Shell.Current.GoToAsync(nameof(ClienteDetailPage));
+        // Corrected: Use absolute path for Shell navigation
+        await Shell.Current.GoToAsync($"///{nameof(ClienteDetailPage)}");
     }
 
     [RelayCommand]

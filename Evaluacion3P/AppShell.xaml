@@ -7,8 +7,26 @@
     Title="Evaluacion3P"
     x:Class="Evaluacion3P.AppShell">
 
-    <!-- Se asume que los estilos globales se cargan desde App.xaml -->
-    <!-- No se fusionan ResourceDictionaries aquí para evitar conflictos o problemas de carga -->
+    <Shell.Resources>
+        <ResourceDictionary>
+            <!-- IMPORTANT: No ResourceDictionary.MergedDictionaries here.
+                 Resources are loaded globally from App.xaml. -->
+
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Dark={StaticResource DarkPrimary}, Light={StaticResource LightPrimary}}" />
+                <Setter Property="Shell.ForegroundColor" Value="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}" />
+                <Setter Property="Shell.TitleColor" Value="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{AppThemeBinding Dark={StaticResource DarkPrimary}, Light={StaticResource LightPrimary}}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="{AppThemeBinding Dark={StaticResource White}, Light={StaticResource Black}}" />
+                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF" />
+                <Setter Property="Shell.TabBarTitleColor" Value="#95FFFFFF" />
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>
 
     <TabBar>
         <!-- Página de Clientes (MainPage) -->
@@ -34,3 +52,4 @@
     </TabBar>
 
 </Shell>
+
